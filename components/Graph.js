@@ -10,34 +10,28 @@ import {
     LineChart,
   } from 'react-native-chart-kit';
 
-  const MyBezierLineChart = () => {
+  const MyBezierLineChart = (props) => {
+    console.log(props.data)
     return (
       <>
         <LineChart
           data={{
-            labels: ['co2', 'February', 'March', 'April'],
+            labels: props.labels,
             datasets: [
               {
-                data: [
-                 0,
-                 2,
-                50,
-                20,
-                 30,
-                40,
-                ],
+                data:props.data
               },
             ],
           }}
           width={Dimensions.get('window').width - 24} // from react-native
-          height={220}
+          height={320}
           
           chartConfig={{
-            backgroundColor: '#1cc910',
+            backgroundColor: '#108810',
             backgroundGradientFrom: '#eff3ff',
-            backgroundGradientTo: '#efefef',
+            backgroundGradientTo: '#fff',
             decimalPlaces: 0, 
-            color: (opacity = 255) => `rgba(0, 0, 0, ${opacity})`,
+            color: (opacity = 255) => `rgba(0, 1, 0, ${opacity})`,
             style: {
               borderRadius: 16,
             },
@@ -50,11 +44,11 @@ import {
       </>
     );
   };
-  function Graph ( ) {
+  function Graph (props ) {
     return (
       <SafeAreaView style={{flex: 1}}>
       <View>
-       <MyBezierLineChart />
+       <MyBezierLineChart data={props.data} labels={props.labels} />
       </View>
       </SafeAreaView>
     )

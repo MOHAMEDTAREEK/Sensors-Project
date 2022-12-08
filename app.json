@@ -1,5 +1,8 @@
 {
   "expo": {
+    "packagerOpts": {
+      "sourceExts": ["cjs"]
+    },
     "name": "Farah-App",
     "slug": "Farah-App",
     "version": "1.0.0",

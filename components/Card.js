@@ -3,16 +3,17 @@ import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Colors, GlobalStyles } from "../constants/colors";
 import Icon from "./icon";
 
-function Card () {  
+function Card (props) {  
+    
     const navigation = useNavigation(); 
     function cardPressHandler () {
-    navigation.navigate ('DetailsScreen')
+    navigation.navigate ('DetailsScreen',{path:props.path})
 }
     return (
         <Pressable onPress={cardPressHandler} style={({pressed}) => pressed && styles.pressed}>
         <View style={styles.cardContainer}> 
-            <Text style={styles.mainPercentage}>70%</Text>
-            <Text style={styles.Textdanger}>unit</Text>
+            <Text style={styles.mainPercentage}>{props.text}</Text>
+            <Text style={styles.Textdanger}>{props.unit}</Text>
         </View>
         </Pressable>
     )
@@ -22,17 +23,23 @@ export default Card;
 
 const styles = StyleSheet.create ({
     cardContainer: {
-        padding:90,
-        backgroundColor:  GlobalStyles.colors.primary500,
+        padding:40,
+        backgroundColor: "rgba(0,0,0,0)",
         justifyContent:'center',
         alignItems:'center',
         margin:46,
-        borderRadius: 135,
+        borderRadius: 100,
         elevation:8,
+        borderColor:"white",
+        borderWidth:2,
+        borderStyle:"dashed",
+        height:200,
+        width:200
+
         
     } ,
     mainPercentage :{
-        fontSize: 50,
+        fontSize: 30,
         color:'white',
     },
     pressed:{

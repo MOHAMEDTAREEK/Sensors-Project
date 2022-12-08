@@ -16,17 +16,22 @@ export default function App() {
     <>
       <StatusBar style="light" />
        <NavigationContainer>
-        <Stack.Navigator  screenOptions={{
-        headerStyle: {backgroundColor:GlobalStyles.colors.primary800 },
-        headerTintColor: 'white',
-        contentStyle: { backgroundColor:GlobalStyles.colors.primary700 },
-        statusBarColor:'black',
-      }}>
+        <Stack.Navigator
+          screenOptions={{
+        // headerStyle: {backgroundColor:"rgba(0,0,0,0.1)" },
+        // headerTintColor: 'white',
+        // contentStyle: { backgroundColor:"rgba(0,0,0,.1)" },
+         statusBarColor:'black',
+      }}
+      
+      >
           
-          <Stack.Screen name="DataScreen" component={DataScreen}  options={{
+          <Stack.Screen name="DataScreen" component={DataScreen}  
+          options={{
             title:'data screen',
             headerRight: ({tintColor}) => <IconButton icon="md-information-circle-outline" color={tintColor} size={30} />
-          }} />
+          }}
+           />
           <Stack.Screen name="ComaprisonScreen" component={ComaprisonScreen}/>
           <Stack.Screen name="GrapheScreen" component={GrapheScreen}/>  
           <Stack.Screen name='DetailsScreen' component={Details} />
