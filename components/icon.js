@@ -1,11 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import { Colors, GlobalStyles } from "../constants/colors";
+
 function Icon ({ name,height }) {
 return (
     <View style={{...styles.container,height: height , width:height }}> 
-      <MaterialCommunityIcons name={name} size={40} color="white" />
+      <MaterialCommunityIcons name={name} size={40} color="white" /> ,
+      
     </View>
 )
 }

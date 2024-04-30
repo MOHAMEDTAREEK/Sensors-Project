@@ -2,10 +2,10 @@ import { View,StyleSheet, ScrollView,Text,Alert } from "react-native";
 import Graph from "../components/Graph";
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase-config.js';
-import {
-  ref,
-  onValue,
-} from 'firebase/database';
+//import {
+ // ref,
+ // onValue,
+//} //from 'firebase/database';
 import ExampleOne from "../components/Table"
 function ComaprisonScreen (props) {
   let tableData=[];
@@ -81,7 +81,6 @@ export default ComaprisonScreen;
       justifyContent:'center',
       margin:10,
       paddingTop:24,
-    
     },
     secContainer:{
       paddingTop:30,

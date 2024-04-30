@@ -1,7 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
 import { Text, View, StyleSheet, Pressable } from "react-native";
-import { Colors, GlobalStyles } from "../constants/colors";
-import Icon from "./icon";
 
 function Card (props) {  
     
@@ -18,7 +16,6 @@ function Card (props) {
         </Pressable>
     )
 }
-
 export default Card;
 
 const styles = StyleSheet.create ({
@@ -35,8 +32,6 @@ const styles = StyleSheet.create ({
         borderStyle:"dashed",
         height:200,
         width:200
-
-        
     } ,
     mainPercentage :{
         fontSize: 30,

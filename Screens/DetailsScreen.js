@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, Button } from "react-native";
+import { Text, View, Button,StyleSheet } from "react-native";
 import Graph from "../components/Graph";
 import { db } from '../firebase-config.js';
-import {
-  ref,
-  onValue,
-  push,
-  update,
-  remove
-} from 'firebase/database';
+//import {
+ // ref,
+ // onValue,
+ // push,
+ // update,
+ // remove
+//} //from 'firebase/database';
 function Details(props) {
 
 

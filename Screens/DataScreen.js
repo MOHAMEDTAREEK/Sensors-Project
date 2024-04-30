@@ -1,17 +1,17 @@
-import { Text, View, StyleSheet, ScrollView, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ScrollView, ImageBackground, Button } from "react-native";
 import React, { useState, useEffect } from 'react';
 
 import Card from "../components/Card";
 import Icon from "../components/icon";
 import { Colors, GlobalStyles } from "../constants/colors";
 import { db } from '../firebase-config.js';
-import {
+/*import {
     ref,
     onValue,
     push,
     update,
     remove
-} from 'firebase/database';
+} from 'firebase/database';*/
 import bg from "../assets/bg.png";
 const image = { uri: "https://reactjs.org/logo-og.png" };
 
@@ -54,11 +54,12 @@ function DataScreen() {
 
                 <View style={styles.IconContainer1}>
                     <Icon name="water" height={130} />
+                    
                 </View>
 
                 <View style={styles.IconContainer}>
                     <Icon name="ph" />
-                    <Icon name="molecule-co2" />
+                    <Icon name="molecule-co2"  />
                 </View>
 
             </ImageBackground>
@@ -70,7 +71,8 @@ export default DataScreen;
 const styles = StyleSheet.create({
     Textcontaner: {
         color: 'white',
-    }, image: {
+    }, 
+    image: {
         flex: 1,
         justifyContent: "center"
     },

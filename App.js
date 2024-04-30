@@ -7,7 +7,6 @@ import DataScreen from './Screens/DataScreen';
 import GrapheScreen from './Screens/GrapheScreen';
 import Details from './Screens/DetailsScreen';
 import IconButton from './components/iconButton';
-import { Colors, GlobalStyles } from './constants/colors';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
